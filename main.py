@@ -1,6 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
-import pymongo
+
 from DB import Pig, Fowls, Cow, Sheep, Feed, GrassFeed, Add
 
 Pig()  # 抓取毛豬交易

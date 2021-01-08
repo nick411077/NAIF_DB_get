@@ -8,6 +8,7 @@ def Pig():
     soup = BeautifulSoup(response.text, "html.parser")
     key = []
     value = ["", "", "", "", ""]
+    v = {}
     for i in range(0, 5):
         key.append(soup.find('div', class_="ScrollForm").find_all('th')[i].text)
     for i in range(1, 7):
@@ -18,3 +19,5 @@ def Pig():
             for x in range(0, 4):
                 value[x + 1] = soup.find('div', class_="ScrollForm").find_all('tr')[i].find_all('td')[x].text
         mongoOut(key, value, "毛豬交易", 1)
+
+
